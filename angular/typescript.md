@@ -1,6 +1,6 @@
 # Typescript
 
-To watch the file for automatic compiling: 
+To watch the file for automatic compiling:
 
 `tsc app -w`
 
@@ -10,20 +10,18 @@ To tell to TypeScript to watch all the files, we must tell it that we are workin
 
 `tsc`
 
-
 ## Types of data:
 
 ```javascript
+let name: string = "Peter";
+let number: number = 123;
+let boolean: boolean = true;
 
-let name:string = "Peter";
-let number:number = 123;
-let boolean:boolean = true;
+let today: Date = new Date();
 
-let today:Date = new Date();
+today = new Date("2020-10-21");
 
-today = new Date('2020-10-21');
-
-let anykind:any;
+let anykind: any;
 
 anykind = nombre;
 anykind = boolean;
@@ -33,38 +31,37 @@ When declaring objects, the instance MUST have the exact same fields as declarat
 
 ```javascript
 let superhero = {
-    name: "Peter",
-    edad: 20
-}
+  name: "Peter",
+  edad: 20
+};
 ```
 
 ## Template Literals
 
 ```javascript
-let name:string = "John";
-let surname:string = "Doe";
-let age:number = 32;
+let name: string = "John";
+let surname: string = "Doe";
+let age: number = 32;
 
 let text = `Hello,
-${ name } ${ surname }
-${ age }`
-
+${name} ${surname}
+${age}`;
 ```
 
 ## Optional, Mandatory & Default Params
 
 Mandatory and default params must be declared first, optional last.
 
-```javascript
+```typescript
 function activate ( who:string,
                     object:string = "an object",
                     moment?:string) # mandatory, default value, optional
 ```
 
-## Arroy Functions
+## Arrow Functions
 
 ```typescript
-let myFunction = ( a:number, b:number ) => a + b;
+let myFunction = (a: number, b: number) => a + b;
 ```
 
 ## Destructuring
@@ -72,9 +69,9 @@ let myFunction = ( a:number, b:number ) => a + b;
 Arrays:
 
 ```typescript
-let avengers:string[] = [ "Thor", "Steve", "Tony" ];
+let avengers: string[] = ["Thor", "Steve", "Tony"];
 
-let [ thor, captn, ironman ] = avengers;
+let [thor, captn, ironman] = avengers;
 ```
 
 ## Interfaces
@@ -83,18 +80,16 @@ Always declare interfaces with UpperCase
 
 ```typescript
 interface Xmen {
-    name:string,
-    power: string
+  name: string;
+  power: string;
 }
 
-function sendMission ( xmen : Xmen ){
-
-    console.log("Sending to : " + xmen.name)
+function sendMission(xmen: Xmen) {
+  console.log("Sending to : " + xmen.name);
 }
 
-let wolverine:Xmen = {
-    name: "Wolverine",
-    power: "Regenerated"
-}
+let wolverine: Xmen = {
+  name: "Wolverine",
+  power: "Regenerated"
+};
 ```
-
