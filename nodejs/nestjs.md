@@ -298,7 +298,19 @@ export interface ArgumentMetadata {
   data?: string;
 }
 ```
+
 These properties describe the currently processed argument:
-  - Type: Indicates wheter the argument is a body `@Body()`, `Query()`, `@Param()` or a custom parameter.
-  - metatype: Provides the metatype of the argument, for example, `String`. 
-  - data: the string passed to the decorator, for example `@Body('string')`. 
+
+- Type: Indicates wheter the argument is a body `@Body()`, `Query()`, `@Param()` or a custom parameter.
+- metatype: Provides the metatype of the argument, for example, `String`.
+- data: the string passed to the decorator, for example `@Body('string')`.
+
+## Interceptors
+
+Interceptors make possible to:
+
+- bind **extra logic** before /after method execution
+- transform the result returned from a function
+- transform the exception thrown from a function
+- extend the basic function behavior
+- completely override a function depend on specific conditions (e.g., for caching purposes)
